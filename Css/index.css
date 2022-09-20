@@ -74,14 +74,12 @@ nav ul a.icon:hover{
 }
 
 .intro{
-    display: flex;
+    display: block;
     width: 100%;
     height: 100%;
     background-color: #F7ECDE;
     background: url(./Components/intro.png);
-    background-size: contain;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
 }
 .intro-img{
     position: absolute;
