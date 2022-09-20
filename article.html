@@ -3,24 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php
-            echo $judul;
-        ?></title>
+        <title>Artikel</title>
         <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./Css/articleItem.css"> 
         <script src="https://kit.fontawesome.com/ab7db22d73.js" crossorigin="anonymous"></script>
         <script src="../Jquery/jquery.js"></script>
     </head>
     <body>
         <span>
-            <input type="hidden" value=<?php echo $id; ?> id="articleId">
-
-            <?php
-                if (isset($userInfo)) {
-                    echo '<input type="hidden" value="'.$userInfo[1].'" id="articleId">';
-                } else {
-                    echo '<input type="hidden" value="anonymus" id="articleId">';
-                }
-            ?>
+            <input type="hidden"/>
         </span>
         <nav>
             <div class="wrapper">
@@ -41,7 +31,7 @@
         </div> 
         <div class="articlex">
             <div class="judulartikel">
-                <h1><?php echo $judul; ?></h1> 
+                <h1>Judul</h1> 
             </div>
             <div class="articlebody">
                 <div class="article-content">
@@ -53,7 +43,7 @@
                     <hr>
                     <!--artikel ditulis dibawah-->
                     <article>
-                        <p><?php echo $desc; ?></p>
+                        <p></p>
                     </article>
                 </div>
             </div>
