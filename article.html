@@ -1,32 +1,4 @@
-<?php
-    session_start();
-    include "./Backend/local-server-connect.php";
-    include "./Backend/user-data.php";
-
-    $id = $_GET['id'];
-
-    $userInfo = $_SESSION['user_info'];
-
-    $query = mysqli_query($connectUser, "SELECT * FROM artikel WHERE id='$id'");
-
-    while($row = mysqli_fetch_array($query)) {
-        $judul = $row['judul'];
-        $desc = nl2br($row['deskripsi']);
-        $link = $row['video'];
-    }
-
-    if (substr($link, 0, 4) == "www.") {
-        $pattern = 'www.';
-        $link = str_ireplace($pattern, "https://www.", $link);
-
-    }
-    if (substr($link, 0, 15) == "www.youtube.com" || substr($link, 0, 23) == "https://www.youtube.com") {
-        $pattern = 'embed/';
-        $link = str_ireplace("watch?v=", $pattern, $link);
-    }
-?>
-
-
+<!DOCTYPE html> 
 <html>
     <head>
         <meta charset="UTF-8">
