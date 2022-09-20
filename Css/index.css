@@ -78,7 +78,7 @@ nav ul a.icon:hover{
     width: 100%;
     height: 100%;
     background-color: #F7ECDE;
-    background: url(./Components/gunung.jpg);
+    background: url(../Components/intro.png);
     background-size: contain;
     justify-content: center;
     align-items: center;
