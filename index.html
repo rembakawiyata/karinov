@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./Css/index.css">
+    <link rel="stylesheet" href="index mobile.css">
     <script src="https://kit.fontawesome.com/ab7db22d73.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
+    <nav id="Navbar" class="default">
         <div class="wrapper">
             <div class="logo"><h2>Rembaka Wiyata</h2></div>
             <div class="menu">
@@ -17,13 +17,14 @@
                     <li onclick="location.href='./content.html'">Content</li>
                     <li onclick="location.href=''">Forum</li>
                     <li onclick="location.href=''">Contact</li>
-                    <button type="button" class="login-button" onclick="location.href='./login.html'">Login</button>
+                    <button type="button" class="login-button" onclick="location.href='./Frontend/login.html'">Login</button>
+                    <a onclick="myNav()" class="icon"><i class="fa fa-bars"></i></a>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="intro">
-        <!-- <div class="intro-img">
+        <div class="intro-img">
             <img src="" alt="Rembaka Wiyata img">
         </div>
         <div class="intro-text">
@@ -31,7 +32,7 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat excepturi aliquid magnam vitae facilis similique tempore, obcaecati culpa aspernatur eos, at illo, cum non iure enim distinctio atque accusantium totam?
             </p>
-        </div> -->
+        </div>
     </div>
     <!--daffa-->
     <div class="intro-deskripsi">
@@ -93,7 +94,7 @@
             </div>
             <div class="col">
                 <h3>Links<div class="underline"><span></span></div></h3>
-                <ul class="footernav">
+                <ul>
                     <li onclick="location.href='#'"><a>Home</a></li>
                     <li onclick="location.href=''"><a>Content</a></li>
                     <li onclick="location.href=''"><a>Forum</a></li>
@@ -110,6 +111,7 @@
         </div>
         <hr>
         <p class="copyright1">FTMD @ 2022 - All Rights Reserved</p>
-    </footer> 
+    </footer>   
+    <script src="script.js"></script>
 </body>
 </html>
