@@ -1,54 +1,16 @@
-<?php
-    session_start();
-    include "./Backend/local-server-connect.php";
-    include "./Backend/user-data.php";
-
-    $id = $_GET['id'];
-
-    $userInfo = $_SESSION['user_info'];
-
-    $query = mysqli_query($connectUser, "SELECT * FROM artikel WHERE id='$id'");
-
-    while($row = mysqli_fetch_array($query)) {
-        $judul = $row['judul'];
-        $desc = nl2br($row['deskripsi']);
-        $link = $row['video'];
-    }
-
-    if (substr($link, 0, 4) == "www.") {
-        $pattern = 'www.';
-        $link = str_ireplace($pattern, "https://www.", $link);
-
-    }
-    if (substr($link, 0, 15) == "www.youtube.com" || substr($link, 0, 23) == "https://www.youtube.com") {
-        $pattern = 'embed/';
-        $link = str_ireplace("watch?v=", $pattern, $link);
-    }
-?>
-
-
+<!DOCTYPE html> 
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php
-            echo $judul;
-        ?></title>
+        <title>Artikel</title>
         <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./Css/articleItem.css"> 
         <script src="https://kit.fontawesome.com/ab7db22d73.js" crossorigin="anonymous"></script>
         <script src="../Jquery/jquery.js"></script>
     </head>
     <body>
         <span>
-            <input type="hidden" value=<?php echo $id; ?> id="articleId">
-
-            <?php
-                if (isset($userInfo)) {
-                    echo '<input type="hidden" value="'.$userInfo[1].'" id="articleId">';
-                } else {
-                    echo '<input type="hidden" value="anonymus" id="articleId">';
-                }
-            ?>
+            <input type="hidden"/>
         </span>
         <nav>
             <div class="wrapper">
@@ -69,7 +31,7 @@
         </div> 
         <div class="articlex">
             <div class="judulartikel">
-                <h1><?php echo $judul; ?></h1> 
+                <h1>Judul</h1> 
             </div>
             <div class="articlebody">
                 <div class="article-content">
@@ -81,7 +43,7 @@
                     <hr>
                     <!--artikel ditulis dibawah-->
                     <article>
-                        <p><?php echo $desc; ?></p>
+                        <p></p>
                     </article>
                 </div>
             </div>

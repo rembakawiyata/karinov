@@ -1,6 +1,4 @@
-<?php
-    include "./Backend/local-server-connect.php";
-?>
+<!DOCTYPE html>
 <html>
     <body>
         <div class="article-nav">
@@ -27,12 +25,6 @@
                 <!--sidebar start-->
                 <div class="sidebar">
                     <ul>
-                        <?php
-                            $getArticles = mysqli_query($connectUser, "SELECT * FROM artikel");
-                            while ($row = mysqli_fetch_assoc($getArticles)) {
-                                echo '<li><a target="_blank" href="./article.php?id='.$row['id'].'">'.$row['judul'].'</a></li>';
-                            }
-                        ?>
                     </ul>
                 </div>
                 <!--sidebar end-->
@@ -42,18 +34,10 @@
                         <div class="article-content">
                             <!--Isi artikel terdiri dari gambar text dll-->
                             <!--Dibuat flex-->
-                            <?php
-                                $getArticles = mysqli_query($connectUser, "SELECT * FROM artikel");
-                                while ($row = mysqli_fetch_assoc($getArticles)) {
-                                    $videoYTId = substr($row['video'], -11);
-                                    echo '
-                                        <div class="group" onclick="location.href=\'./article.php?id='.$row['id'].'\'">
+                                        <div class="group" onclick="location.href='./article.html'">
                                             <img class="imgart1" src="https://img.youtube.com/vi/'.$videoYTId.'/0.jpg" width="100%">
-                                            <div class="group-text">'.$row['judul'].'</div>
+                                            <div class="group-text">Judul</div>
                                         </div>
-                                    ';
-                                }
-                            ?>
                         </div>
                     </div>
                     <div class="transition1"></div>
