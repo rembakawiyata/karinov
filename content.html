@@ -7,7 +7,7 @@
                 <meta charset="utf-8">
                 <title>Artikel Jendela Ilmu Rembaka Wiyata</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./Css/articles.css">
+                <link rel="stylesheet" href="./Css/articles.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
             </head>
             <body>
@@ -15,15 +15,17 @@
                 <!--header area start-->
                 <header>
                     <div class="left_area">
+                        <a onclick="myBar()" class="licon"><i class="fa fa-bars"></i></a>
                         <h3>Rembaka Wiyata</h3>
                     </div>
                     <div class="right_area">
                         <a href="#" class="search_btn">Cari Artikel</a>
+                        <a href="#" class="ricon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </header>
                 <!--header area end-->
                 <!--sidebar start-->
-                <div class="sidebar">
+                <div id="bar" class="sidebar">
                     <ul>
                     </ul>
                 </div>
@@ -84,5 +86,6 @@
                 <p class="copyright1">FTMD @ 2022 - All Rights Reserved</p>
             </footer>
         </div>
+        <script src="./Javascript/sidenav.js"></script>
     </body>
 </html>

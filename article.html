@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Artikel</title>
-        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="./Css/articleItem.css"> 
+        <link rel="stylesheet" href="./Css/articleItem.css"> 
         <script src="https://kit.fontawesome.com/ab7db22d73.js" crossorigin="anonymous"></script>
         <script src="../Jquery/jquery.js"></script>
     </head>
@@ -12,7 +12,7 @@
         <span>
             <input type="hidden"/>
         </span>
-        <nav>
+        <nav id="Navbar" class="default">
             <div class="wrapper">
                 <div class="logo"><h2>Rembaka Wiyata</h2></div>
                 <div class="menu">
@@ -21,6 +21,7 @@
                         <li onclick="location.href='./articles.html'">Content</li>
                         <li onclick="location.href=''">Forum</li>
                         <li onclick="location.href=''">Contact</li>
+                        <a onclick="myNav()" class="icon"><i class="fa fa-bars"></i></a>
                     </ul>
                 </div>
             </div>
@@ -38,7 +39,7 @@
                     <!--Isi judul video dan text article-->
                     <div class="linkvid">
                     <!--gunakan fitur embed youtube utk link dibawah-->
-                    <iframe width="560" height="315" <?php echo "src='".$link."'"; ?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <hr>
                     <!--artikel ditulis dibawah-->
@@ -84,6 +85,7 @@
         <hr>
         <p class="copyright1">FTMD @ 2022 - All Rights Reserved</p>
     </footer>
+    <script src="./Javascript/articlenav.js"></script>
     <!-- <script>
         $("#submit").click(() => {
             console.log("button is clicked");
