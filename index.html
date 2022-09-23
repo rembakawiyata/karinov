@@ -64,31 +64,12 @@
     </div>
     <!--Raja-->
     <div class="intro-artikel">
-        <?php
-            $getNewestArticle = mysqli_query($connectUser, "SELECT * FROM artikel LIMIT 1");
-            while ($row = mysqli_fetch_assoc($getNewestArticle)) {
-                $articleId = $row['id'];
-                $judul = $row['judul'];
-                $desc = substr($row['deskripsi'], 0, 600);
-                $video = $row['video'];
-                $type = $row['type'];
-            }
-            $videoId = substr($video, -11);
-
-            if ($type == "image") {
-                echo '
                     <div class="intro-artikel-left">
-                        <img src="'.$video.'" height="300px">
-                    </div>
-                ';
-            } else {
-                echo '
+                        <img src="" height="300px">
+                    </div>      
                     <div class="intro-artikel-left">
-                        <img src="https://img.youtube.com/vi/'.$videoId.'/0.jpg" height="300px">
+                        <img src="https://img.youtube.com/vi/tRkQwAoxpRc/0.jpg" height="300px">
                     </div>
-                ';
-            }
-        ?>
         <div class="intro-artikel-right">
             <div class="intro-artikel-right-top">
                 <h2></h2>
